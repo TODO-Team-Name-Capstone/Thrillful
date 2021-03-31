@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact.css" />
     <title>Contact Us</title>
   </head>
   <body>
@@ -30,6 +31,26 @@
       <main>
           <!--gf-->
        <h1 class="text-center">Contact Us</h1>
+       <div class="container">
+           <form>
+               <label for="fname"><span>First Name</span>
+               <input type="text" id="fname" name="firstname" placeholder="">
+
+               <label for="fname">Last Name</label>
+               <input type="text" id="lname" name="lastname" placeholder="">
+
+               <label for="email">Email</label>
+               <input type="text" id="email" name="email" placeholder="">
+
+               <label for="subject">Subject</label>
+               <input type="text" id="subject" name="subject" placeholder="">
+
+               <textarea id="message" name="message" placeholder="Write your message here"></textarea>
+
+               <button type="button" class="btn btn-danger btn-block">Send</button> <!--btn-block?-->
+           </form>
+       </div>
+
       </main>
       <footer class="row center">&#169; Thrillful 2021</footer>
     </div>
