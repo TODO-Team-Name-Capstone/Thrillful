@@ -109,9 +109,28 @@ img.medium {
   margin: 0.1rem;
 }
 
+/*Search*/
 #search-box{
   margin-right: 15rem;
   margin-left: 15rem;
   padding-right: 15rem;
   padding-left: 15rem;
+}
+
+.side-nav {
+  background-color: #ff0000;
+  width: 15rem;
+  height: 100vw;
+  margin-top: -5rem;
+  margin-left: -2.5rem;
+  margin-bottom: -2.5rem;
+}
+.side-nav-list  {
+  list-style: none;
+}
+.catagories {
+  padding-top: 5rem;
+}
+.catagories, a:hover{
+  color: #ffffff;
 }
