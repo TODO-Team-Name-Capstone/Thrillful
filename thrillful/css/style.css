@@ -55,6 +55,26 @@ footer {
 }
 
 /* Contact */
+.container_contact {
+  text-align: center;
+  display: block;
+  text-align: center;
+}
+.form_contact {
+  /* position:relative; */
+  padding-top: 4%;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+
+}
+.input_contact {
+  margin: 5px;
+}
+.btn_contact_container {
+  text-align: center;
+}
 .btn_contact {
   background-color: #ff0000;
 }

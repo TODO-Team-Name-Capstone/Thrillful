@@ -11,11 +11,7 @@
   <title>Contact Us</title>
 </head>
 
-<body>
 
-</body>
-
-</html>
 
 <body>
   <div>
@@ -36,51 +32,47 @@
     </header>
     <main>
       <h1 class="text-center">Contact Us</h1>
-      <div class="container">
-        <form autocomplete="off">
-
+      <div class="container container_contact">
+        <form class="form form_contact" autocomplete="off">
           <div class="row">
-            <div class="col-xs-6 col-md-2">
-              <label for="fname"></label>
-              <input class="" type="text" id="fname" name="firstname" placeholder="First Name">
+            <div class="col-xs-12 col-sm-8 col-md-3">
+              <input class="form-control input_contact" type="text" id="fname" name="firstname"
+                placeholder="First Name">
             </div>
-            <div class="col-xs-6 col-md-2">
-              <label for="lname"></label>
-              <input class="" type="text" id="lname" name="lastname" placeholder="Last Name">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-6 col-md-2">
-              <label for="phone"></label>
-              <input class="" type="text" id="phone" name="phone" placeholder="Phone Number">
-            </div>
-            <div class="col-xs-6 col-md-2">
-              <label for="email"></label>
-              <input class="" type="text" id="email" name="email" placeholder="Email">
-            </div>
-          </div>
-
-
-          <div class="row">
-            <div class="col-xs-6">
-              <label for="subject"></label>
-              <input class="col-xs-10" type="text" id="subject" name="subject" placeholder="Subject">
+            <div class="col-xs-12 col-sm-8 col-md-3">
+              <input class="form-control input_contact" type="text" id="lname" name="lastname" placeholder="Last Name">
             </div>
           </div>
 
           <div class="row">
-            <div class="col-xs-6">
-              <textarea class="col-xs-10" id="message" name="message" placeholder="Write your message here"></textarea>
+            <div class="col-xs-12 col-sm-8 col-md-3">
+              <input class="form-control input_contact" type="text" id="phone" name="phone" placeholder="Phone Number">
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-3">
+              <input class="form-control input_contact" type="text" id="email" name="email" placeholder="Email">
             </div>
           </div>
 
-          <!--row for button?-->
+          <!-- <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-6 ">
+              <input class="form-control input_contact" type="text" id="subject" name="subject" placeholder="Subject">
+            </div>
+          </div> -->
           <div class="row">
-            <div class="col-xs-12">
-              <button type="button" class="btn btn-danger btn_contact col-xs-3">Send</button>
+            <div class="col-12">
+              <input class="form-control input_contact" type="text" id="subject" name="subject" placeholder="Subject">
             </div>
           </div>
 
+          <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-6">
+              <textarea class="form-control input_contact" id="message" name="message"
+                placeholder="Write your message here"></textarea>
+            </div>
+          </div>
+          <div class="btn_contact_container">
+            <button type="button" class="btn btn-danger btn_contact">Send</button>
+          </div>
         </form>
       </div>
     </main>
@@ -91,5 +83,4 @@
   </div>
 
 </body>
-
 </html>
