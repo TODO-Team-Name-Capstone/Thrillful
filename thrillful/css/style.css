@@ -9,22 +9,18 @@ body {
   font-size: 1.6rem;
   font-family: Helvetica, Arial, sans-serif;
 }
-
 .navbar {
   width: 100%;
   margin: 0;
 }
-
 #brand {
   color: #ffffff;
   font-size: 3rem;
   font-weight: bold;
 }
-
 #brand:hover{
   color: #ff0000;
 }
-
 footer {
   background-color: #000;
   color: #ffffff;
@@ -32,36 +28,33 @@ footer {
   bottom: 0;
   width: 100%;
 }
-
 .fBrand {
   text-align: center;
 }
-
 .side-nav-bar {
   background-color: #ff0000;
   width: 15rem;
   height:100vh;
-
 }
-
 .side-nav-list  {
   list-style: none;
 }
-
 .catagories {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
-
 .catagories a{
-  color:#000;
-  
+  color:#000;  
 }
 .catagories, a:hover{
   color: #ffffff;
   text-decoration: none;
-
 }
 .catagories, a:visited{
   color: #ffffff;
+}
+
+/* Contact */
+.btn_contact {
+  background-color: #ff0000;
 }
