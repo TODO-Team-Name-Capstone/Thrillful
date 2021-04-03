@@ -50,7 +50,7 @@ footer {
   color: #ffffff;
   text-decoration: none;
 }
-.catagories, a:visited{
+.catagories:visited{
   color: #000;
 }
 
