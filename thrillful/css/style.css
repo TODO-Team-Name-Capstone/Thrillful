@@ -34,6 +34,13 @@ footer a {
 .fBrand {
   text-align: center;
 }
+a{
+  color:#000;
+}
+a:hover{
+  color: #ff0000;
+  text-decoration: none;
+}
 .side-nav-bar {
   background-color: #ff0000;
   width: 15rem;
@@ -46,16 +53,19 @@ footer a {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
-#catagories a{
-  color:#000;  
-}
-#catagories:hover{
-  color: #ffffff;
-  text-decoration: none;
-}
-#catagories a:visited{
+
+.catagories > li > a:link{
   color: #000;
 }
+
+.catagories > a:hover{
+  color: #ffffff;
+}
+
+.catagories > a:visited{
+  color: #ffffff;
+}
+
 
 /* Contact */
 .container_contact {
