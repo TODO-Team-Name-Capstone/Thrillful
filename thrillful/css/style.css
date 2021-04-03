@@ -54,7 +54,7 @@ a:hover{
   padding-bottom: 2.5rem;
 }
 
-.catagories > li > a:link{
+.catagories a{
   color: #000;
 }
 
