@@ -1,61 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Thrillful</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Contact Us</title>
 </head>
+
+
+
 <body>
-  
-</body>
-</html>
-  <body>
-    <div>
-      <header>
-        <div class="navbar navbar-inverse">
-          <a class="navbar-brand" id="brand" href="index.html">Thrillful</a>
-          <form class="navbar-form navbar-left" id="search-box" action="/action_page.php">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-warning">Submit</button>
+  <div>
+    <header>
+      <div class="navbar navbar-inverse">
+        <a class="navbar-brand" id="brand" href="index.html">Thrillful</a>
+        <form class="navbar-form navbar-left" id="search-box" action="/action_page.php">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-warning">Submit</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
           <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-      </header>
-      <main>
-       <h1 class="text-center">Contact Us</h1>
-       <div class="container">
-           <form>
-               <label for="fname"><span>First Name</span>
-               <input class="contact-input" type="text" id="fname" name="firstname" placeholder="">
-
-               <label for="fname">Last Name</label>
-               <input class="contact-input" type="text" id="lname" name="lastname" placeholder="">
-
-               <label for="email">Email</label>
-               <input class="contact-input" type="text" id="email" name="email" placeholder="">
-
-               <label for="subject">Subject</label>
-               <input class="contact-input" type="text" id="subject" name="subject" placeholder="">
-
-               <textarea class="contact-input" id="message" name="message" placeholder="Write your message here"></textarea>
-
-               <button type="button" class="btn btn-danger btn-block">Send</button> <!--btn-block?-->
-           </form>
-       </div>
-
-      </main>
-      <div>
-        <footer class="fBrand">&#169; Thrillful 2021</footer>
+        </ul>
       </div>
+    </header>
+    <main>
+      <h1 class="text-center">Contact Us</h1>
+      <div class="container container_contact">
+        <form class="form form_contact" autocomplete="off">
+
+          <div class="row">
+            <div class="col-xs-12 col-md-12">
+              <input class="form-control input_contact" type="text" id="fname" name="firstname"
+                placeholder="First Name">
+            </div>
+            <div class="col-xs-12 col-md-12">
+              <input class="form-control input_contact" type="text" id="lname" name="lastname" placeholder="Last Name">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-md-12">
+              <input class="form-control input_contact" type="text" id="phone" name="phone" placeholder="Phone Number">
+            </div>
+            <div class="col-xs-12 col-md-12">
+              <input class="form-control input_contact" type="text" id="email" name="email" placeholder="Email">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-md-12">
+              <input class="form-control input_contact" type="text" id="subject" name="subject" placeholder="Subject">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-md-12">
+              <textarea class="form-control input_contact" id="message" name="message"
+                placeholder="Write your message here"></textarea>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="btn_contact_container">
+              <button type="button" class="btn btn-danger btn_contact btn-block">Send</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <div>
+      <footer class="fBrand">&#169; Thrillful 2021</footer>
     </div>
-  </body>
+  </div>
+
+</body>
+
 </html>
