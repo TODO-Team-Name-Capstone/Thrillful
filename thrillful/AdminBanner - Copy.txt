@@ -57,7 +57,7 @@
             <form action="/action_page.php">
                 <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
                     style="display: none;">
-                <p><label type="submit button" for="file" style="cursor: pointer;" class="btn btn-primary" >Upload Image</lable></p>
+                <p><label type="submit" for="file" style="cursor: pointer;" >Upload Image</lable></p>
                 <p><img id="output" width="1000" onclick="myFunction(this);"/></p>
             </form>
     </div>
