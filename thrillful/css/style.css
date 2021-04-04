@@ -58,18 +58,14 @@ footer {
 .container_contact {
   text-align: center;
   display: block;
-  text-align: center;
 }
 .form_contact {
   padding-top: 4%;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
-  text-align: left;
 }
-.input_contact {
-  margin: 3%;
-}
+
 .btn_contact_container {
   margin-left: auto;
   margin-right: auto;
