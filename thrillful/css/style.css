@@ -8,6 +8,7 @@ body {
   width: 100%;
   font-size: 1.6rem;
   font-family: Helvetica, Arial, sans-serif;
+  background-image:url("../HomePagePicture.jpg");
 }
 .navbar {
   width: 100%;
@@ -92,3 +93,20 @@ a:hover{
 .btn_contact {
   background-color: #ff0000;
 }
+
+/* .Banner
+{
+  width:100vw;
+  background-color:black;
+  height:5rem;
+
+}try to see why this didnt work, scout out your sizing options for future implementations. 
+-robyn */
+
+.Banner {
+  background-color: #000;
+  color: #fff;
+  width: 100vw;
+  height: 5rem;
+}
+
