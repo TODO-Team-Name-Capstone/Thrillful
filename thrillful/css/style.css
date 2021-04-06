@@ -10,6 +10,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 .navbar {
+  background-color: #000;
   width: 100%;
   margin: 0;
 }
@@ -28,8 +29,18 @@ footer {
   bottom: 0;
   width: 100%;
 }
+footer a {
+  color: #fff;
+}
 .fBrand {
   text-align: center;
+}
+a{
+  color:#000;
+}
+a:hover{
+  color: #ff0000;
+  text-decoration: none;
 }
 .side-nav-bar {
   background-color: #ff0000;
@@ -43,16 +54,19 @@ footer {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
+
 .catagories a{
-  color:#000;  
+  color: #000;
 }
-.catagories, a:hover{
-  color: #ffffff;
-  text-decoration: none;
-}
-.catagories, a:visited{
+
+.catagories > a:hover{
   color: #ffffff;
 }
+
+.catagories > a:visited{
+  color: #ffffff;
+}
+
 /* Contact */
 .container-contact {
   text-align: center;
