@@ -52,22 +52,27 @@ footer a {
   color: #fff;
 }
 
-
-
 /*Side Navigation*/
 .side-nav-bar {
   float: left;
   background-color: #ff0000;
-  width: 15rem;
-  display: flex;
-  flex: wrap;
+  width: 10rem;
+  position: relative;
+
 }
 .side-nav-list  {
   list-style: none;
+  text-align:center;
+  padding: 0;
+  display: flex; 
+  justify-content: center;
+
+
 }
 .catagories {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+  display:block;
 }
 .catagories a{
   color: #000;
