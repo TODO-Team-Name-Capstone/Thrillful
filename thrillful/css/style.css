@@ -11,8 +11,28 @@ body {
 }
 .navbar {
   background-color: #000;
-  width: 100%;
+  width: 100% !important;
   margin: 0;
+}
+
+footer {
+  background-color: #000;
+  color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.fBrand {
+  text-align: center;
+}
+
+/*Links*/
+a{
+  color:#000;
+}
+a:hover{
+  color: #ff0000;
+  text-decoration: none;
 }
 #brand {
   color: #ffffff;
@@ -22,26 +42,11 @@ body {
 #brand:hover{
   color: #ff0000;
 }
-footer {
-  background-color: #000;
-  color: #ffffff;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
 footer a {
   color: #fff;
 }
-.fBrand {
-  text-align: center;
-}
-a{
-  color:#000;
-}
-a:hover{
-  color: #ff0000;
-  text-decoration: none;
-}
+
+/*Side Navigation*/
 .side-nav-bar {
   background-color: #ff0000;
   width: 15rem;
@@ -67,7 +72,7 @@ a:hover{
   color: #ffffff;
 }
 
-/* Contact */
+/* Contact Form */
 .container-contact {
   text-align: center;
   display: block;
@@ -85,6 +90,8 @@ a:hover{
     justify-content: center;
     margin: 10px;
 }
-.btn-contact {
+/*Buttons*/
+.btn-red {
   background-color: #ff0000;
+  color: #ffffff;
 }
