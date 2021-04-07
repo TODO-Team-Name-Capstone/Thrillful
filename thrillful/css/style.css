@@ -18,7 +18,10 @@ header{
   width: 100% !important;
   margin: 0;
 }
-
+main {
+  overflow: hidden;
+  
+}
 footer {
   background-color: #000;
   color: #ffffff;
@@ -52,30 +55,36 @@ footer a {
 
 /*Side Navigation*/
 .side-nav-bar {
+  /*float: left;*/
   background-color: #ff0000;
-  width: 15rem;
-  height:100vh;
+  width: 10rem;
+  position: absolute;
+  top: auto;
+  height: 100vh;
+
+
 }
 .side-nav-list  {
+  margin-top: 2.5rem;
   list-style: none;
+  text-align:center;
+  padding: 0;
+  display: flex; 
+  justify-content: center;
+
+
 }
 .catagories {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+  display:block;
 }
-
 .catagories a{
   color: #000;
 }
-
 .catagories > a:hover{
   color: #ffffff;
 }
-
-.catagories > a:visited{
-  color: #ffffff;
-}
-
 /* Contact Form */
 .container-contact {
   text-align: center;
@@ -100,6 +109,79 @@ footer a {
   color: #ffffff;
 }
 
+/*Rating*/
+.rating{
+  color: #ff0000;
+}
+
+/* Image */
+img {
+  border-radius: 0.5rem;
+}
+img.small {
+  max-width: 5rem;
+  width: 100%;
+}
+img.medium {
+  max-width: 29rem;
+  width: 100%;
+}
+img.large {
+  width: 100%;
+}
+
+/* Card */
+.card {
+  place-content: flex-end;
+  flex-flow: wrap;
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.card-body {
+  padding: 1rem;
+}
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.row.center {
+  justify-content: center;
+  margin-left: 10rem;
+  margin-right: auto;
+}
+.row.top {
+  align-items: flex-start;
+}
+.row.start {
+  justify-content: flex-start;
+}
+.col-1 {
+  flex: 1 1 25rem;
+}
+.col-2 {
+  flex: 2 1 50rem;
+}
+.col-3 {
+  flex: 32 1 75rem;
+}
+.min-30 {
+  min-width: 30rem;
+}
+.p-1 {
+  padding: 1rem;
+}
+.price {
+  font-size: 2rem;
+}
+
+
 /* .Banner
 {
   width:100vw;
@@ -115,4 +197,5 @@ footer a {
   width: 100vw;
   height: 5rem;
 }
+
 
