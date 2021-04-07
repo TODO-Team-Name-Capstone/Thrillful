@@ -32,10 +32,9 @@
             </nav>
 
             <!-- Banner  -->
-            <!-- Sandi's Code -->
             <div class="w3-content">
-                <img class="mySlides" src="https://i.imgur.com/ZtdhrUA.jpg" alt="custom_html_banner1"
-                    style="width:100%">
+                <img src="https://i.imgur.com/ZtdhrUA.jpg" alt="custom_html_banner1" style="width:100%"
+                    id="imgClickAndChange" onclick="changeImage()">
             </div>
 
             <!-- TODO:When you select the image from upload it will reflect on the banner -->
@@ -47,7 +46,7 @@
         <br>
 
         <main>
-            <!-- This uploads the image and the onclick on the iamge allows you to see the image larger for selecting-->
+        <!-- This uploads the image and the onclick on the iamge allows you to see the image larger for selecting-->
             <h1>Image Import</h1>
             <form action="/action_page.php">
                 <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
@@ -55,7 +54,7 @@
                 <p><label type="submit button" for="file" style="cursor: pointer;" class="btn btn-primary">Upload Image
                         </lable>
                 </p>
-                <p><img id="output" width="1000" onclick="myFunction(this);" /></p>
+                <p><img id="output" width="500" onclick="myFunction(this);" /></p>
             </form>
     </div>
     <!-- <div class="row">
@@ -65,7 +64,7 @@
         </div>
     </div> -->
 
-<!-- Tutor Code -->
+    <!-- Tutor Code -->
     <div class="container">
         <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
         <img id="expandedImg" style="width:100%">
@@ -79,6 +78,17 @@
             var image = document.getElementById('output');
             image.src = URL.createObjectURL(event.target.files[0]);
         };
+
+        function changeImage() {
+
+            if (document.getElementById("imgClickAndChange").src == "http://www.userinterfaceicons.com/80x80/maximize.png") {
+                document.getElementById("imgClickAndChange").src = "http://www.userinterfaceicons.com/80x80/maximize.png";
+                //image.src =  URL.createObjectURL(event.target.files[0]);
+            }
+            else {
+                document.getElementById("imgClickAndChange").src = "http://www.userinterfaceicons.com/80x80/minimize.png";
+            }
+        }
 
     </script>
     </main>
