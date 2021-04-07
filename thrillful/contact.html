@@ -16,7 +16,7 @@
 <body>
   <div>
     <header>
-      <div class="navbar navbar-inverse">
+      <div class="navbar navbar-inverse container-fluid">
         <a class="navbar-brand" id="brand" href="index.html">Thrillful</a>
         <form class="navbar-form navbar-left" id="search-box" action="/action_page.php">
           <div class="form-group">
@@ -27,55 +27,50 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
           <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
         </ul>
       </div>
     </header>
     <main>
       <h1 class="text-center">Contact Us</h1>
-      <div class="container container_contact">
-        <form class="form form_contact" autocomplete="off">
-
-          <div class="row">
-            <div class="col-xs-12 col-md-12">
-              <input class="form-control input_contact" type="text" id="fname" name="firstname"
+      <div class="container container-contact">
+        <form class="form form-contact" method="post" autocomplete="off">
+          <div class="row inline-contact">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <input class="form-control input-contact" type="text" id="fname" name="firstname"
                 placeholder="First Name">
             </div>
-            <div class="col-xs-12 col-md-12">
-              <input class="form-control input_contact" type="text" id="lname" name="lastname" placeholder="Last Name">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <input class="form-control input-contact" type="text" id="lname" name="lastname" placeholder="Last Name">
             </div>
           </div>
-
-          <div class="row">
-            <div class="col-xs-12 col-md-12">
-              <input class="form-control input_contact" type="text" id="phone" name="phone" placeholder="Phone Number">
+          <div class="row inline-contact">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <input class="form-control input-contact" type="text" id="phone" name="phone" placeholder="Phone Number">
             </div>
-            <div class="col-xs-12 col-md-12">
-              <input class="form-control input_contact" type="text" id="email" name="email" placeholder="Email">
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-xs-12 col-md-12">
-              <input class="form-control input_contact" type="text" id="subject" name="subject" placeholder="Subject">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <input class="form-control input-contact" type="text" id="email" name="email" placeholder="Email">
             </div>
           </div>
-
-          <div class="row">
-            <div class="col-xs-12 col-md-12">
-              <textarea class="form-control input_contact" id="message" name="message"
+          <div class="row inline-contact">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <input class="form-control input-contact" type="text" id="subject" name="subject" placeholder="Subject">
+            </div>
+          </div>
+          <div class="row inline-contact">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <textarea class="form-control input-contact" id="message" name="message"
                 placeholder="Write your message here"></textarea>
             </div>
           </div>
-
-          <div class="row">
-            <div class="btn_contact_container">
-              <button type="button" class="btn btn-danger btn_contact btn-block">Send</button>
+          <div class="row inline-contact">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <button type="submit" class="btn btn-red col-lg-12">Send</button>
             </div>
           </div>
         </form>
       </div>
     </main>
-
     <div>
       <footer class="fBrand">&#169; Thrillful 2021</footer>
     </div>

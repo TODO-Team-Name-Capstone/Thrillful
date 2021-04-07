@@ -10,9 +10,33 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   background-image:url("../HomePagePicture.jpg");
 }
+header{
+  background-color: #000;
+}
 .navbar {
-  width: 100%;
+  background-color: #000;
+  width: 100% !important;
   margin: 0;
+}
+
+footer {
+  background-color: #000;
+  color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.fBrand {
+  text-align: center;
+}
+
+/*Links*/
+a{
+  color:#000;
+}
+a:hover{
+  color: #ff0000;
+  text-decoration: none;
 }
 #brand {
   color: #ffffff;
@@ -22,26 +46,11 @@ body {
 #brand:hover{
   color: #ff0000;
 }
-footer {
-  background-color: #000;
-  color: #ffffff;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
 footer a {
   color: #fff;
 }
-.fBrand {
-  text-align: center;
-}
-a{
-  color:#000;
-}
-a:hover{
-  color: #ff0000;
-  text-decoration: none;
-}
+
+/*Side Navigation*/
 .side-nav-bar {
   background-color: #ff0000;
   width: 15rem;
@@ -67,31 +76,28 @@ a:hover{
   color: #ffffff;
 }
 
-
-/* Contact */
-.container_contact {
+/* Contact Form */
+.container-contact {
   text-align: center;
   display: block;
-  text-align: center;
 }
-.form_contact {
+.form-contact {
   padding-top: 4%;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
-  text-align: left;
-
 }
-.input_contact {
-  margin: 3%;
+.inline-contact {
+    display:flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
 }
-.btn_contact_container {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-.btn_contact {
+/*Buttons*/
+.btn-red {
   background-color: #ff0000;
+  color: #ffffff;
 }
 
 /* .Banner
