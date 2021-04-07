@@ -54,13 +54,17 @@ footer a {
 
 /*Side Navigation*/
 .side-nav-bar {
-  float: left;
+  /*float: left;*/
   background-color: #ff0000;
   width: 10rem;
-  position: relative;
+  position: absolute;
+  top: auto;
+  height: 100vh;
+
 
 }
 .side-nav-list  {
+  margin-top: 2.5rem;
   list-style: none;
   text-align:center;
   padding: 0;
@@ -147,6 +151,8 @@ img.large {
 }
 .row.center {
   justify-content: center;
+  margin-left: 10rem;
+  margin-right: auto;
 }
 .row.top {
   align-items: flex-start;
