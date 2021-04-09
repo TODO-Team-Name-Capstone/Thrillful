@@ -12,13 +12,6 @@
 </head>
 
 <body>
-
-</body>
-
-</html>
-
-<body>
-
   <div>
     <header>
       <div class="navbar navbar-expand-md navbar-inverse container-fluid">
@@ -36,21 +29,20 @@
         </ul>
       </div>
 
-        <!-- Banner  -->
-        <div class="w3-content">
-          <img src="https://i.imgur.com/ZtdhrUA.jpg" alt="custom_html_banner1" style="width:100%"
-              id="imgClickAndChange" onclick="changeImage()">
+      <!-- Banner  -->
+      <div class="w3-content">
+        <img src="https://i.imgur.com/ZtdhrUA.jpg" alt="custom_html_banner1" style="width:100%" id="imgClickAndChange"
+          onclick="changeImage()">
       </div>
 
     </header>
     <main>
-
-
-      <div class="adminBanner"> 
+      <div class="adminBanner">
         <div>
           <h1>Image Import</h1>
           <form action="/action_page.php">
-            <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+            <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
+              style="display: none;">
             <p><label type="submit button" for="file" style="cursor: pointer;" class="btn btn-primary">Upload Image
                 </lable>
             </p>
@@ -63,7 +55,7 @@
                   onclick="myFunction(this);">
           </div>
       </div> -->
-  
+
         <!-- Tutor Code -->
         <div class="container">
           <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
@@ -71,7 +63,7 @@
           <div id="imgtext"></div>
         </div>
       </div>>
-      
+
       <!-- TODO: add the ability to upload mulitple images. -->
       <script>
         var loadFile = function (event) {
