@@ -27,7 +27,7 @@ const Product = () => {
                    <Button
                    onClick={() => addItemToCheckout(product.variants[0].id, 1 /*need code to beable to select quantity*/)}
                    _hover={{opacity: '70%'}}
-                   w="10rem" backgroundColor="#ff0000"
+                   w="10rem" backgroundColor="#ff0000" _focus="none"
                    >Add to cart</Button>
                </Flex>
            </Grid>
