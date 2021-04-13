@@ -16,7 +16,7 @@ const Banner = () => {
                 textAlign="center"
                 color="black"
                 fontWeight="bold"
-                fontSize="4rem"
+                fontSize="2rem"
             >
                 Discount Banner edit/remove text here ~ color and or image above
             </Text>
