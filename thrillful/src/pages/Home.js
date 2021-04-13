@@ -1,11 +1,11 @@
 import React from 'react'
-
+import { Box, Button, Text, Image, Center } from '@chakra-ui/react'
 
 const Home = () => {
     return (
-        <div>
-           needs the background image and buttons
-        </div>
+        <Box>
+           <Image w="100%" src="../backgroundImage.png" />
+        </Box>
     )
 }
 
