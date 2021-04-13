@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Grid, Box, Text, Image, VStack, Flex } from '@chakra-ui/react'
+import { Grid, Box, Text, Image, VStack, HStack, Flex } from '@chakra-ui/react'
 
 const Footer = () => {
     return (
@@ -12,11 +12,11 @@ const Footer = () => {
             <VStack p="2rem">
             <Text textAlign="center">&#169; Thrillful</Text>
             </VStack>
-             <VStack flexDirection="row" justifyContent="space-between" pr="1rem">
+             <HStack flexDirection="row" justifyContent="space-between" pr="1rem">
                  <Link>Social</Link> 
                  <Link>Social</Link>
                  <Link>Social</Link>
-             </VStack>
+             </HStack>
          </Grid>
         </Box>
     )
