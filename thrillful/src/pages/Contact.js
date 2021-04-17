@@ -13,12 +13,12 @@ const Contact = () => {
                 <Input placeholder="Last Name" />
 
 
-            <Input placeholder="Email" />
-            <Input placeholder="Phone Number" />
+                <Input placeholder="Email" />
+                <Input placeholder="Phone Number" />
 
-            <Input placeholder="Subject" />
+                <Input placeholder="Subject" />
 
-            <Textarea placeholder="Write your message here" />
+                <Textarea placeholder="Write your message here" />
             </Row>
         </Container>
 
