@@ -34,6 +34,21 @@ const NavMenu = () => {
                         <VStack _hover={{ color: "#ffffff" }} p="2rem">
                             <Link to="/products">All Products</Link>
                         </VStack>
+                        <VStack _hover={{ color: "#ffffff" }} p="2rem">
+                            <Link to="">Dresses</Link>
+                        </VStack>
+                        <VStack _hover={{ color: "#ffffff" }} p="2rem">
+                            <Link to="">Joggers</Link>
+                        </VStack>
+                        <VStack _hover={{ color: "#ffffff" }} p="2rem">
+                            <Link to="">Rompers</Link>
+                        </VStack>
+                        <VStack _hover={{ color: "#ffffff" }} p="2rem">
+                            <Link to="">Accessories</Link>
+                        </VStack>
+                        <VStack _hover={{ color: "#ffffff" }} p="2rem">
+                            <Link to="">Beauty</Link>
+                        </VStack>
                     </DrawerBody>
                     <DrawerFooter>
                         <Text textAlign="center">Footer</Text>
