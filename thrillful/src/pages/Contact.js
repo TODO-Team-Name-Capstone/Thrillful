@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
-import { Input, Textarea } from "@chakra-ui/react"
+import { Input, Textarea } from "@chakra-ui/react";
 
 
 
