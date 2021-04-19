@@ -21,6 +21,7 @@ class AdminBanner extends Component {
 
     //method no argument goal is to upload a file. 
     //https://academind.com/tutorials/reactjs-image-upload/
+    //https://www.youtube.com/watch?v=XeiOnkEI7XI
 
     // fileUploadHandler = () => {
     //     //create an API endpoint that accepts foriegn data a mixture files. And stores the files in cloud storage. 
