@@ -15,7 +15,7 @@ class AdminBanner extends Component {
     //file is now stored in the selected state
     fileSelectedHandler = event => {
         this.setState({
-            selectedFile: event.tart.files[0]
+            selectedFile: event.target.files[0]
         })
     }
 
@@ -23,19 +23,19 @@ class AdminBanner extends Component {
     //https://academind.com/tutorials/reactjs-image-upload/
     //https://www.youtube.com/watch?v=XeiOnkEI7XI
 
-    // fileUploadHandler = () => {
-    //     //create an API endpoint that accepts foriegn data a mixture files. And stores the files in cloud storage. 
-    //     const fd = new FormData();
-    //     fd.append('image',
-    //         this.state.selectedFile,
-    //         this.state.selectedFile
-    //     )
-    //     axios.post('my-domain.com/file-upload', this.state.selectedFile, formData,{
-    //         onUploadProgress: progressEvent => {
-    //             console.log(progressEvent.loaded / progressEvent.total)
-    //         }
-    //     })
-    // }
+    fileUploadHandler = () => {debugger
+        //create an API endpoint that accepts foriegn data a mixture files. And stores the files in cloud storage. 
+        const fd = new FormData();
+        fd.append('image',
+            this.state.selectedFile,
+            this.state.selectedFile
+        )
+        axios.post('my-domain.com/file-upload', this.state.selectedFile, fd,{
+            onUploadProgress: progressEvent => {
+                console.log(progressEvent.loaded / progressEvent.total)
+            }
+        })
+    }
 
     render() {
         return (

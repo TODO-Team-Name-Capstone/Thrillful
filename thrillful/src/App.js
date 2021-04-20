@@ -18,19 +18,27 @@ function App() {
         <Cart />
         <NavMenu />
         <Banner />
+
         <Switch>
-          <Route path = "/adminbanner" component={AdminBanner}/>
+          
+          <Route path="/adminbanner">         
             <AdminBanner/>
+          </Route>
+
           <Route path="/Products/">
             <Products />
           </Route>
+
           <Route path="/Product/:handle">
             <Product />
           </Route>
+
           <Route path="/">
             <Home />
           </Route>
+
         </Switch>
+
         <Footer />
       </Router>
     </div>

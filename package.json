@@ -1,0 +1,26 @@
+{
+  "name": "thrillful",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TODO-Team-Name-Capstone/Thrillful.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TODO-Team-Name-Capstone/Thrillful/issues"
+  },
+  "homepage": "https://github.com/TODO-Team-Name-Capstone/Thrillful#readme",
+  "dependencies": {
+    "shopify-buy": "^2.11.0",
+    "yarn": "^1.22.10"
+  }
+}

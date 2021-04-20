@@ -8,7 +8,7 @@ const Banner = () => {
     return (
     <div className="banner">
         <h1>Banner test</h1>
-        
+        <img src="/public/banner.jpg"/>
         
     </div>
     )
