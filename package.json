@@ -1,0 +1,27 @@
+{
+  "name": "thrillful",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TODO-Team-Name-Capstone/Thrillful.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TODO-Team-Name-Capstone/Thrillful/issues"
+  },
+  "homepage": "https://github.com/TODO-Team-Name-Capstone/Thrillful#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+    "nodemon": "^2.0.7"
+}
