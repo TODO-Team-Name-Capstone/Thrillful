@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/TODO-Team-Name-Capstone/Thrillful#readme",
   "dependencies": {
+    "chakra": "^0.0.3",
+    "react-icons": "^4.2.0",
+    "react-router-dom": "^5.2.0",
     "shopify-buy": "^2.11.0",
     "yarn": "^1.22.10"
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../CSS/Banner.css';
 import { Box, Button, Text, Image, Center, Input } from '@chakra-ui/react';
-import axios from 'axios';
+//import axios from 'axios';
 
 
 
@@ -23,19 +23,19 @@ class AdminBanner extends Component {
     //https://academind.com/tutorials/reactjs-image-upload/
     //https://www.youtube.com/watch?v=XeiOnkEI7XI
 
-    fileUploadHandler = () => {debugger
-        //create an API endpoint that accepts foriegn data a mixture files. And stores the files in cloud storage. 
-        const fd = new FormData();
-        fd.append('image',
-            this.state.selectedFile,
-            this.state.selectedFile
-        )
-        axios.post('my-domain.com/file-upload', this.state.selectedFile, fd,{
-            onUploadProgress: progressEvent => {
-                console.log(progressEvent.loaded / progressEvent.total)
-            }
-        })
-    }
+    // fileUploadHandler = () => {debugger
+    //     //create an API endpoint that accepts foriegn data a mixture files. And stores the files in cloud storage. 
+    //     const fd = new FormData();
+    //     fd.append('image',
+    //         this.state.selectedFile,
+    //         this.state.selectedFile
+    //     )
+    //     axios.post('my-domain.com/file-upload', this.state.selectedFile, fd,{
+    //         onUploadProgress: progressEvent => {
+    //             console.log(progressEvent.loaded / progressEvent.total)
+    //         }
+    //     })
+    // }
 
     render() {
         return (
