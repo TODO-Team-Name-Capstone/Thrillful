@@ -31,11 +31,11 @@ const NavMenu = () => {
                     <DrawerCloseButton />
                     <DrawerHeader textAlign="center">Catagories</DrawerHeader>
                     <DrawerBody backgroundColor="#000000" color="#ff0000" flexDirection="row" alignItems="center" justifyContent="space-between" >
-                        <VStack _hover={{ color: "#ffffff" }} p="2rem">
+                        <VStack _hover={{ color: "#ffffff"}} p="2rem">
                             <Link to="/products">All Products</Link>
                         </VStack>
                         <VStack _hover={{ color: "#ffffff" }} p="2rem">
-                            <Link to="">Dresses</Link>
+                            <Link to="/collections/" >Dresses</Link>
                         </VStack>
                         <VStack _hover={{ color: "#ffffff" }} p="2rem">
                             <Link to="">Joggers</Link>

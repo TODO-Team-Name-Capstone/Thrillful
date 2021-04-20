@@ -12,7 +12,6 @@ const Contact = () => {
                 <Input placeholder="First Name" />
                 <Input placeholder="Last Name" />
 
-
                 <Input placeholder="Email" />
                 <Input placeholder="Phone Number" />
 

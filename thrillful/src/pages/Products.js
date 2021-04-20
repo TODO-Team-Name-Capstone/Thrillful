@@ -22,7 +22,7 @@ const Products = () => {
                             <Box _hover={{ opacity: '80%' }} textAlign='center'/*move text here*/>
                                 <Image src={product.images[0].src} p="2rem" /> 
                                 <Text>
-                                    {product.title}
+                                   {product.title}
                                 </Text>
                                 <Text>
                                     ${product.variants[0].price}
