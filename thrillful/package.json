@@ -13,9 +13,9 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "bcryptjs": "^2.4.3",
-    "express-async-handler": "^1.1.4",
     "chakra": "^0.0.3",
     "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
     "framer-motion": "^4",
     "mongoose": "^5.12.5",
     "react": "^17.0.2",
@@ -51,7 +51,6 @@
       "last 1 safari version"
     ]
   },
-
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "devDependencies": {
