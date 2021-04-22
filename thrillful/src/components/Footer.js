@@ -11,6 +11,7 @@ const Footer = () => {
             </VStack>
             <VStack p="2rem">
             <Text textAlign="center">&#169; Thrillful</Text>
+            <Link to='/adminbanner'>Admin</Link>
             </VStack>
              <HStack flexDirection="row" justifyContent="space-between" pr="1rem">
                  <Link>Social</Link> 
