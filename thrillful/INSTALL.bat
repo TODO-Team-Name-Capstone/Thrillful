@@ -23,8 +23,8 @@ ECHO ============================
 PAUSE
 
 rem installing DB server
-call npm install mongoose
-call npm install dotenv
+rem call npm install mongoose
+rem call npm install dotenv
 
 ECHO ============================
 ECHO This should be the completed startup 
