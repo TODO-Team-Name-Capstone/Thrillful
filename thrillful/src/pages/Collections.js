@@ -8,7 +8,7 @@ const Collections = () => {
 
     //const collectionId = 'Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI2NTc2MzM1Njg0MA==';
     //onst { collectionId } = useParams();
-    const { fetchAllCollections, collections, products } = useContext(ShopContext)
+    const { fetchAllCollections, collections, products} = useContext(ShopContext)
 
 
 
@@ -28,10 +28,10 @@ const Collections = () => {
 
     if (!collections) return <div>Loading...</div>
 
-    for (let i = 0; i <= collections.length; i++) {
-        for (let j = 0; products.length; j++) {
-            console.log("Collections.js: ", collections[i].value);
-        }
+    for(let i = 0; i <= collections.length; i++) {
+            for(let j = 0; products.length; j++) {
+                console.log("Collections.js: ", collections[i].value);
+            }
 
     }
 
@@ -39,7 +39,7 @@ const Collections = () => {
         <Box p="2rem">
             <Grid m="auto">
                 {
-                    collections.map((collection, index) =>
+                    collections.map((collection, index) => 
                         <Link to={collection} key={collection.id}>
                             <Box _hover={{ opacity: '80%' }} textAlign='center'/*move text here*/>
                                 {/* <Image source={collection.src} p="2rem" />  */}
