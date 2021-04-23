@@ -38,10 +38,7 @@ const NavMenu = () => {
                             <Link to="/collections/" >Dresses</Link>
                         </VStack>
                         <VStack _hover={{ color: "#ffffff" }} p="2rem">
-                            <Link to="">Joggers</Link>
-                        </VStack>
-                        <VStack _hover={{ color: "#ffffff" }} p="2rem">
-                            <Link to="">Rompers</Link>
+                            <Link to="">Two-Piece Sets</Link>
                         </VStack>
                         <VStack _hover={{ color: "#ffffff" }} p="2rem">
                             <Link to="">Accessories</Link>

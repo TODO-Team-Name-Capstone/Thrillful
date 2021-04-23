@@ -80,13 +80,20 @@ class ShopProvider extends Component {
     }
 
     fetchAllCollections = async () => {
-        client.collection.fetchAllWithProducts().then((collections) => {
-            this.setState({ collections: collections })
-        });
-        // const collection = await client.collection.fetchAllWithProducts()
 
-        // this.setState({ collections: collection })
+        const collection = await client.collection.fetchAllWithProducts()
+        //updates the state//
+        this.setState({ collections: collection })
     }
+
+    // fetchAllCollections = async () => {
+    //     client.collection.fetchAllWithProducts().then((collection) => {
+    //         this.setState({ collections: collection })
+    //     });
+    //     // const collection = await client.collection.fetchAllWithProducts()
+
+    //     // this.setState({ collections: collection })
+    // }
 
     fetchCollectionById = async (collectionId) => {
         client.collection.fetchWithProducts(collectionId, { productsFirst: 10 }).then((collection) => {
@@ -106,18 +113,18 @@ class ShopProvider extends Component {
 
     render() {
 
-        //All collections
-        const test = client.collection.fetchAllWithProducts()
-        console.log("fetch all with prods collection", test)
+        // //All collections
+        // const test = client.collection.fetchAllWithProducts()
+        // console.log("fetch all with prods collection", test)
 
-        //collection by id 
-        const collectionId = 'Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI2NTc2MzM1Njg0MA==';
-        const collectionTest = client.collection.fetchWithProducts(collectionId)
-        console.log("collection by id", collectionTest)
+        // //collection by id 
+        // const collectionId = 'Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI2NTc2MzM1Njg0MA==';
+        // const collectionTest = client.collection.fetchWithProducts(collectionId)
+        // console.log("collection by id", collectionTest)
 
-        //all products
-        const productTest = client.product.fetchAll()
-        console.log("product: ", productTest)
+        // //all products
+        // const productTest = client.product.fetchAll()
+        // console.log("product: ", productTest)
 
         return (
             <ShopContext.Provider value={{
