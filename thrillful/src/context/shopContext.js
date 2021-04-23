@@ -79,27 +79,27 @@ class ShopProvider extends Component {
         this.setState({ product: product })
     }
 
-    fetchAllCollections = async () => {
-
-        const collection = await client.collection.fetchAllWithProducts()
-        //updates the state//
-        this.setState({ collections: collection })
-    }
-
     // fetchAllCollections = async () => {
-    //     client.collection.fetchAllWithProducts().then((collection) => {
-    //         this.setState({ collections: collection })
-    //     });
-    //     // const collection = await client.collection.fetchAllWithProducts()
 
-    //     // this.setState({ collections: collection })
+    //     const collection = await client.collection.fetchAllWithProducts()
+    //     //updates the state//
+    //     this.setState({ collections: collection })
     // }
 
-    fetchCollectionById = async (collectionId) => {
-        client.collection.fetchWithProducts(collectionId, { productsFirst: 10 }).then((collection) => {
-            this.setState({ collections: collection })
+    // fetch all collections, including their products
+    fetchAllCollections = async () => {
+        client.collection.fetchAllWithProducts().then((collections) => {
+            this.setState({ collections: collections })
+            console.log("COLLECTIONS ALL", collections.length);
+            console.log("COLLECTIONS 1 PRODUCTS", collections[1].products[1].handle);
         });
     }
+
+    // fetchCollectionById = async (collectionId) => {
+    //     client.collection.fetchWithProducts(collectionId, { productsFirst: 10 }).then((collection) => {
+    //         this.setState({ collections: collection })
+    //     });
+    // }
 
 
 
