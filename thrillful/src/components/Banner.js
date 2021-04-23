@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Box, Button, Text, Image, Center } from '@chakra-ui/react'
-import '../CSS/Banner.css'
+import '../css/Banner.css'
 
 const Banner = () => {
     return (

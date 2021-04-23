@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../CSS/Banner.css';
+import '../css/Banner.css';
 import { Box, Button, Text, Image, Center, Input } from '@chakra-ui/react';
 //import axios from 'axios';
 
