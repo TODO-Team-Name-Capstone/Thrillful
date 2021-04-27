@@ -24,11 +24,11 @@ const Collections = () => {
             <Grid templateColumns={["repeat(1, 1fr)", "repeat(3, 1fr)"]} m="auto">
                 {
                     collections.map(collection => (
-                        <Link to={`collections/${collection}`} key={collection.id}>
+                        <Link to={`/${collection.title}`} key={collection.id}>
                             <Box _hover={{ opacity: '80%' }} textAlign='center'/*move text here*/>
                                 <Image src={collection.image.src} p="2rem" /> 
                                 <Text>
-                                    {collection.handle}
+                                    {collection.title}
                                 </Text>
                                 <Text>
 
