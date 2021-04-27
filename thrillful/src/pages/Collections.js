@@ -8,59 +8,40 @@ const Collections = () => {
 
     //const collectionId = 'Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI2NTc2MzM1Njg0MA==';
     //onst { collectionId } = useParams();
-    const { fetchAllCollections, collections, products} = useContext(ShopContext)
-
+    const { fetchAllCollections, collections } = useContext(ShopContext)
 
 
     useEffect(() => {
-        fetchAllCollections()
-        //fetchCollectionById(collectionId)
-    }, //[fetchCollectionById, collectionId])
-        [fetchAllCollections])
+        fetchAllCollections();
 
+        return () => { };
+    }, [fetchAllCollections]);
 
-    // Object.values(collections).forEach(collection => {
-    //     console.log("collection.products", collection.products)
-    // });
-
-    // collections.map((collection, index) =>
-    //     console.log("collections index", collection.products[index].handle))
-
-    if (!collections) return <div>Loading...</div>
-
-    for(let i = 0; i <= collections.length; i++) {
-            for(let j = 0; products.length; j++) {
-                console.log("Collections.js: ", collections[i].value);
-            }
-
-    }
+    if (!collections) return <div>There's no collections</div>;
 
     return (
         <Box p="2rem">
-            <Grid m="auto">
+            <Grid templateColumns={["repeat(1, 1fr)", "repeat(3, 1fr)"]} m="auto">
                 {
-                    collections.map((collection, index) => 
-                        <Link to={collection} key={collection.id}>
+                    collections.map(collection => (
+                        <Link to={`collections/${collection}`} key={collection.id}>
                             <Box _hover={{ opacity: '80%' }} textAlign='center'/*move text here*/>
-                                {/* <Image source={collection.src} p="2rem" />  */}
-                                {/* <Text>
-                                    Title: {collection.products[index].title}
-                                </Text> */}
+                                <Image src={collection.image.src} p="2rem" /> 
                                 <Text>
-                                    {collection.products[index].title}
+                                    {collection.handle}
                                 </Text>
-                                {/* <Text>
-                                    {collection.product[index].description}
-                                </Text> */}
+                                <Text>
+
+                                </Text>
+
                             </Box>
                         </Link>
-
-                    )
+                    ))
 
                 }
             </Grid>
         </Box>
-    )
-}
+    );
+};
 export default Collections
 

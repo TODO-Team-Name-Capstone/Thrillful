@@ -18,6 +18,7 @@ class ShopProvider extends Component {
         products: [],
         checkout: {},
         collections: [],
+        collection: {},
         /*for cart slide out functionality*/
         isCartOpen: false,
         isMenuOpen: false
@@ -86,14 +87,33 @@ class ShopProvider extends Component {
     //     this.setState({ collections: collection })
     // }
 
-    // fetch all collections, including their products
     fetchAllCollections = async () => {
-        client.collection.fetchAllWithProducts().then((collections) => {
-            this.setState({ collections: collections })
-            console.log("COLLECTIONS ALL", collections.length);
-            console.log("COLLECTIONS 1 PRODUCTS", collections[1].products[1].handle);
-        });
-    }
+        const collections = await client.collection.fetchAll();
+
+        this.setState({ collections: collections });
+
+        console.log("COLLECTIONS ALL", collections);
+
+    };
+
+    // fetchAllCollections = async () => {
+
+    //     const collection = await client.collection.fetchAllWithProducts()
+    //     //updates the state//
+    //     this.setState({ collections: collection })
+    // }
+
+    // fetch all collections, including their products
+    // fetchAllCollections = async () => {
+    //     client.collection.fetchAllWithProducts().then((collections) => {
+    //         this.setState({ collections: collections })
+
+    //         console.log("COLLECTIONS ALL", collections);
+    //         console.log("COLLECTIONS 1 PRODUCTS", collections[1].products[1].handle);
+
+
+    //     });
+    // }
 
     // fetchCollectionById = async (collectionId) => {
     //     client.collection.fetchWithProducts(collectionId, { productsFirst: 10 }).then((collection) => {
@@ -123,8 +143,8 @@ class ShopProvider extends Component {
         // console.log("collection by id", collectionTest)
 
         // //all products
-        // const productTest = client.product.fetchAll()
-        // console.log("product: ", productTest)
+        const productTest = client.product.fetchAll()
+        console.log("product: ", productTest)
 
         return (
             <ShopContext.Provider value={{
