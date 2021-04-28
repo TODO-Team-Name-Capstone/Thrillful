@@ -1,5 +1,5 @@
 # Thrillful
-Thrillful. An e-commerce website.
+Thrillful a simple shopify e-commerce website.
 After running a git clone and cloning the repo.
 OPen a new terminal
 cd into thrillful
