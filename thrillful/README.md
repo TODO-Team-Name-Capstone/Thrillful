@@ -8,6 +8,12 @@ In the project directory, you can run:
 
 ### `yarn start`
 
+### `npm run run`
+Runs the development server after running the INSTALL.bat file
+
+### `npm run start`
+Runs the backend server after running the INSTALL.bat file
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 

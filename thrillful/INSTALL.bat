@@ -27,5 +27,12 @@ rem call npm install mongoose
 rem call npm install dotenv
 
 ECHO ============================
-ECHO This should be the completed startup 
+ECHO This should be the completed startup. 
+ECHO ============================
+ECHO ============================
+ECHO To run development server use:
+ECHO npm run run
+ECHO ============================
+ECHO To run the backend server use:
+ECHO npm run start
 ECHO ============================
