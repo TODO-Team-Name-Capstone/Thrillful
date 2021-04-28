@@ -1,30 +1,28 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import data from './data.js';
 import customerRouter from './routers/customerRouter.js';
 
+const PORT = process.env.PORT || 5000
 const app = express();
+//const uri = 'mongodb+srv://MissS:ASHivy11@cluster0.jcl0m.mongodb.net/Thrillful?retryWrites=true&w=majority';
 
-mongoose.connect('mongodb://localhost/Thrillful', {
+mongoose.connect('mongodb+srv://MissS:ASHivy11@cluster0.jcl0m.mongodb.net/Thrillful?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
 })
 
-app.get('/api/customers', (req, res) => {
-    res.send(data.customers);
-})
 
 app.use('/api/customers', customerRouter);
+app.get('/api/customers', customerRouter);
 
-app.get('/', (req, res) => {
-    res.send('Server is ready');
-})
+app.post('/signin', customerRouter);
+
 
 app.use((err, req, res, next) => {
-    res.status(500).send({message: err.message});
+    res.status(500).send({ message: err.message });
 })
-const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => {
-    console.log('Serve at http://localhost:5000');
-})
+    console.log('Serve at http://localhost:5000')
+});
