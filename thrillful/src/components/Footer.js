@@ -9,14 +9,18 @@ const Footer = () => {
             <VStack flexDirection="row" justifyContent="center"/*needs adjusting*/  p="2rem">
                  <Image /*src="../logo.jpg" h="2.5rem" w="2.5rem"*/ /*if removed leave vstack for spacing*/ />
             </VStack>
-            <VStack p="2rem">
-            <Text textAlign="center">&#169; Thrillful</Text>
-            </VStack>
+            <VStack>
+            <HStack p="1rem">
+            <Text mr="2rem" textAlign="center">&#169; Thrillful</Text>
+            <Link to='/contact'>Contact Us</Link>
+            </HStack>
              <HStack flexDirection="row" justifyContent="space-between" pr="1rem">
                  <Link>Social</Link> 
                  <Link>Social</Link>
                  <Link>Social</Link>
              </HStack>
+            </VStack>
+
          </Grid>
         </Box>
     )

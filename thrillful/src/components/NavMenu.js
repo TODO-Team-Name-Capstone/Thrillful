@@ -29,10 +29,22 @@ const NavMenu = () => {
             <DrawerOverlay>
                 <DrawerContent>
                     <DrawerCloseButton />
-                    <DrawerHeader textAlign="center">Catagories</DrawerHeader>
+                    <DrawerHeader textAlign="center"><Link to="/collections">Collections</Link></DrawerHeader>
                     <DrawerBody backgroundColor="#000000" color="#ff0000" flexDirection="row" alignItems="center" justifyContent="space-between" >
-                        <VStack _hover={{ color: "#ffffff" }} p="2rem">
+                        <VStack _hover={{ color: "#ffffff"}} p="2rem">
                             <Link to="/products">All Products</Link>
+                        </VStack>
+                        <VStack _hover={{ color: "#ffffff" }} p="2rem">
+                            <Link to="/Dresses" >Dresses</Link>
+                        </VStack>
+                        <VStack _hover={{ color: "#ffffff" }} p="2rem">
+                            <Link to="">Two-Piece Sets</Link>
+                        </VStack>
+                        <VStack _hover={{ color: "#ffffff" }} p="2rem">
+                            <Link to="">Accessories</Link>
+                        </VStack>
+                        <VStack _hover={{ color: "#ffffff" }} p="2rem">
+                            <Link to="">Beauty</Link>
                         </VStack>
                     </DrawerBody>
                     <DrawerFooter>

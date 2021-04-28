@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './pages/Home'
+import Collections from './pages/Collections.js'
+import Contact from './pages/Contact.js'
 import Products from './pages/Products.js'
 import Product from './pages/Product.js'
 import NavBar from './components/NavBar'
@@ -18,15 +20,21 @@ function App() {
         <NavMenu />
         <Banner />
         <Switch>
-        <Route path="/adminbanner">         
-            <AdminBanner/>
+          <Route path="/contact/" component={Contact}>
+            <Contact />
           </Route>
+          <Route path="/adminbanner">         
+            <AdminBanner/>
+            </Route>
           <Route path="/Products/">
             <Products />
           </Route>
           <Route path="/Product/:handle">
             <Product />
-          </Route>
+            </Route>
+            <Route path="/Collections/">
+              <Collections />
+            </Route>
           <Route path="/">
             <Home />
           </Route>
