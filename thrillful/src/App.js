@@ -9,7 +9,7 @@ import Cart from './components/Cart'
 import NavMenu from './components/NavMenu'
 import Footer from './components/Footer'
 import Banner from './components/Banner'
-
+import AdminBanner from './pages/AdminBanner.js'
 
 function App() {
   return (
@@ -23,6 +23,9 @@ function App() {
           <Route path="/contact/" component={Contact}>
             <Contact />
           </Route>
+          <Route path="/adminbanner">         
+            <AdminBanner/>
+            </Route>
           <Route path="/Products/">
             <Products />
           </Route>

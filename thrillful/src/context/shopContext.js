@@ -3,12 +3,11 @@ import Client from 'shopify-buy';/*check import*/
 
 
 const ShopContext = React.createContext();
-
 /*Builds the client gets api from .env file */
 const client = Client.buildClient({
-    storefrontAccessToken: '955c6f5a46ee1f803914123685d31acf',
-    domain: 'thrillfuldevelopment.myshopify.com'
-});
+    storefrontAccessToken: process.env.REACT_APP_SHOPIFY_API,
+  	domain: process.env.REACT_APP_SHOPIFY_DOMAIN
+  });
 
 
 class ShopProvider extends Component {
