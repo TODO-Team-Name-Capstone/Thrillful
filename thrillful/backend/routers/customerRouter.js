@@ -1,11 +1,12 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
-//import bcrypt from 'bcryptjs';
+import bcrypt from 'bcryptjs';
 import data from '../data.js'
-import Customer from '../customerModel/userModel.js'
+import Customer from '../models/userModel.js'
 
 
 const customerRouter = express.Router();
+
 
 customerRouter.get('/seed',
     expressAsyncHandler(async (req, res) => {
@@ -15,50 +16,49 @@ customerRouter.get('/seed',
     })
 );
 
-/**WIP trying to figure out! */
-/************************************************************************************* */
-// customerRouter.post(
-//     '/signin',
-//     expressAsyncHandler(async (req, res) => {
-//       const customer = await Customer.findOne({email : req.body.email});
-//       if (customer) {
-//         if (bcrypt.compareSync(req.body.password, customer.password)) {
-//           res.send({
-//             _id: customer._id,
-//             email: customer.email,
-//             password: customer.password,
-//             //token: generateToken(user),
-//           });
-//           return;
-//         }
-//       }
-//       res.status(401).send({ message: 'Invalid email or password' });
-//     })
-//   );
+customerRouter.post(
+    '/signin',
+    expressAsyncHandler(async (req, res) => {
+      const customer = await Customer.findOne({ email: req.body.email });
+      console.log(customer);
+      if (customer) {
+        if (bcrypt.compareSync(req.body.password, customer.password)) {
+          res.send({
+            _id: customer._id,
+            email: customer.email,
+            password: customer.password,
+            //token: generateToken(user),
+          });
+          return res;
+        }
+      }
+      res.status(401).send({ message: 'Invalid email or password' });
+    })
+  );
 
-// customerRouter.post(
-//     '/register',
-//     expressAsyncHandler(async (req, res) => {
-//       const customer = new Customer({
-//         first_name: req.body.first_name,
-//         last_name: req.body.last_name,
-//         username: req.body.username,
-//         email: req.body.email,
-//         password: bcrypt.hashSync(req.body.password, 8),
-//       });
-//       const createdUser = await customer.save();
-//       res.send({
-//         _id: createdUser._id,
-//         first_name: createdUser.first_name,
-//         last_name: createdUser.last_name,
-//         username: createdUser.username,
-//         email: createdUser.email,
-//         isAdmin: createdUser.isAdmin,
-//         //token: generateToken(createdUser),
-//       });
-//     })
-//   );
-/*************************************************************************************** */
+customerRouter.post(
+    '/register',
+    expressAsyncHandler(async (req, res) => {
+      const customer = new Customer({
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        username: req.body.username,
+        email: req.body.email,
+        password: bcrypt.hashSync(req.body.password, 8),
+      });
+      const createdUser = await customer.save();
+      res.send({
+        _id: createdUser._id,
+        first_name: createdUser.first_name,
+        last_name: createdUser.last_name,
+        username: createdUser.username,
+        email: createdUser.email,
+        isAdmin: createdUser.isAdmin,
+        //token: generateToken(createdUser),
+      });
+    })
+   );
+
 customerRouter.get(
     '/',
     expressAsyncHandler(async (req, res) => {
@@ -76,6 +76,41 @@ customerRouter.get(
         res.send(customer);
       } else {
         res.status(404).send({ message: 'Customer Not Found' });
+      }
+    })
+  );
+
+  customerRouter.delete(
+    '/:id',
+    expressAsyncHandler(async (req, res) => {
+      const customer = await Customer.findById(req.params.id);
+      if (customer) {
+        if (customer.email === 'shawnastaff@gmail.com') {
+          res.status(400).send({ message: 'Can Not Delete Admin User' });
+          return;
+        }
+        const deleteCustomer = await customer.remove();
+        res.send({ message: 'User Deleted', user: deleteCustomer });
+      } else {
+        res.status(404).send({ message: 'User Not Found' });
+      }
+    })
+  );
+  customerRouter.put(
+    '/:id',
+    expressAsyncHandler(async (req, res) => {
+      const customer = await Customer.findById(req.params.id);
+      if (customer) {
+        customer.first_name = req.body.first_name || customer.first_name;
+        customer.last_name = req.body.last_name || customer.last_name;
+        customer.username = req.body.username || customer.username;
+        customer.email = req.body.email || customer.email;
+        customer.password = bcrypt.hashSync(req.body.password || customer.password, 8);
+        customer.isAdmin = Boolean(req.body.isAdmin);
+        const updatedCustomer = await customer.save();
+        res.send({ message: 'User Updated', customer: updatedCustomer });
+      } else {
+        res.status(404).send({ message: 'User Not Found' });
       }
     })
   );
