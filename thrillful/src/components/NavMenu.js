@@ -32,7 +32,7 @@ const NavMenu = () => {
                     <DrawerHeader textAlign="center"><Link to="/collections">Collections</Link></DrawerHeader>
                     <DrawerBody backgroundColor="#000000" color="#ff0000" flexDirection="row" alignItems="center" justifyContent="space-between" >
                         <VStack _hover={{ color: "#ffffff"}} p="2rem">
-                            <Link to="/products">All Products</Link>
+                            <Link to="/all-products">All Products</Link>
                         </VStack>
                         <VStack _hover={{ color: "#ffffff" }} p="2rem">
                             <Link to="/Dresses" >Dresses</Link>

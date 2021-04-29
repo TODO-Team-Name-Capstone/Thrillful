@@ -17,7 +17,7 @@ class ShopProvider extends Component {
         products: [],
         checkout: {},
         collections: [],
-        collection: {},
+        collection: [],
         /*for cart slide out functionality*/
         isCartOpen: false,
         isMenuOpen: false
@@ -28,8 +28,6 @@ class ShopProvider extends Component {
         localStorage.setItem("checkout-id", checkout.id)
         this.setState({ checkout: checkout })
     }
-
-
 
     componentDidMount() {
         if (localStorage.checkout_id) {
@@ -79,24 +77,27 @@ class ShopProvider extends Component {
         this.setState({ product: product })
     }
 
-    // fetchAllCollections = async () => {
-
-    //     const collection = await client.collection.fetchAllWithProducts()
-    //     //updates the state//
-    //     this.setState({ collections: collection })
-    // }
-
+    // currently being used in Collections. Does not fetch collections with their products.
     fetchAllCollections = async () => {
         const collections = await client.collection.fetchAll();
-
         this.setState({ collections: collections });
-
-        console.log("COLLECTIONS ALL", collections);
-
+        //console.log("COLLECTIONS ALL", collections);
     };
 
-    // fetchAllCollections = async () => {
+    fetchCollectionById = async (collectionId) => {
+        const collection = await client.collection.fetchWithProducts(collectionId);
+        this.setState({collection: collection});
+        console.log("collection.products", collection.products);
 
+    }
+    // fetchCollectionById = async (collectionId) => {
+    //     client.collection.fetchWithProducts(collectionId, { productsFirst: 10 }).then((collection) => {
+    //         this.setState({ collections: collection })
+    //     });
+    // }
+
+      // *****TESTS for getting collections with their products *****
+    // fetchAllCollections = async () => {
     //     const collection = await client.collection.fetchAllWithProducts()
     //     //updates the state//
     //     this.setState({ collections: collection })
@@ -106,20 +107,16 @@ class ShopProvider extends Component {
     // fetchAllCollections = async () => {
     //     client.collection.fetchAllWithProducts().then((collections) => {
     //         this.setState({ collections: collections })
-
     //         console.log("COLLECTIONS ALL", collections);
     //         console.log("COLLECTIONS 1 PRODUCTS", collections[1].products[1].handle);
-
-
     //     });
     // }
 
-    // fetchCollectionById = async (collectionId) => {
-    //     client.collection.fetchWithProducts(collectionId, { productsFirst: 10 }).then((collection) => {
-    //         this.setState({ collections: collection })
-    //     });
+        // fetchAllCollections = async () => {
+    //     const collection = await client.collection.fetchAllWithProducts()
+    //     //updates the state//
+    //     this.setState({ collections: collection })
     // }
-
 
 
     closeCart = async () => { this.setState({ isCartOpen: false }) }
@@ -132,18 +129,19 @@ class ShopProvider extends Component {
 
     render() {
 
+        // *** TESTS ******
         // //All collections
         // const test = client.collection.fetchAllWithProducts()
         // console.log("fetch all with prods collection", test)
 
         // //collection by id 
-        // const collectionId = 'Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI2NTc2MzM1Njg0MA==';
-        // const collectionTest = client.collection.fetchWithProducts(collectionId)
-        // console.log("collection by id", collectionTest)
+        const collectionId = 'Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI2NTc2MzM1Njg0MA==';
+        const collectionTest = client.collection.fetchWithProducts(collectionId)
+        console.log("collection by id", collectionTest)
 
         // //all products
-        const productTest = client.product.fetchAll()
-        console.log("product: ", productTest)
+        // const productTest = client.product.fetchAll()
+        // console.log("product: ", productTest)
 
         return (
             <ShopContext.Provider value={{
