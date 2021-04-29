@@ -86,7 +86,7 @@ class ShopProvider extends Component {
 
     fetchCollectionById = async (collectionId) => {
         const collection = await client.collection.fetchWithProducts(collectionId);
-        this.setState({collection: collection});
+        this.setState({collection: collection.products});
         console.log("collection.products", collection.products);
 
     }

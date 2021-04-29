@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { Box, Grid, Image, Text, Button, Heading, Flex, Center } from '@chakra-ui/react'
+import { Box, Grid, Image, Text, Center } from '@chakra-ui/react'
 import { ShopContext } from '../context/shopContext';
 import { Link } from 'react-router-dom'
 
