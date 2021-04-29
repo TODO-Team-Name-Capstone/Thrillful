@@ -4,6 +4,9 @@ import customerRouter from './routers/customerRouter.js';
 
 const PORT = process.env.PORT || 5000
 const app = express();
+app.use(express.json()); //Used to parse JSON bodies
+app.use(express.urlencoded()); //Parse URL-encoded bodies
+
 //const uri = 'mongodb+srv://MissS:ASHivy11@cluster0.jcl0m.mongodb.net/Thrillful?retryWrites=true&w=majority';
 
 mongoose.connect('mongodb+srv://MissS:ASHivy11@cluster0.jcl0m.mongodb.net/Thrillful?retryWrites=true&w=majority', {
@@ -14,9 +17,6 @@ mongoose.connect('mongodb+srv://MissS:ASHivy11@cluster0.jcl0m.mongodb.net/Thrill
 
 
 app.use('/api/customers', customerRouter);
-app.get('/api/customers', customerRouter);
-
-app.post('/signin', customerRouter);
 
 
 app.use((err, req, res, next) => {
