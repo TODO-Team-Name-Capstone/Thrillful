@@ -3,6 +3,8 @@ import expressAsyncHandler from 'express-async-handler';
 import bcrypt from 'bcryptjs';
 import data from '../data.js'
 import Customer from '../models/userModel.js'
+import { generateToken, isAdmin, isAuth } from '../utils.js';
+
 
 
 const customerRouter = express.Router();
@@ -27,7 +29,7 @@ customerRouter.post(
             _id: customer._id,
             email: customer.email,
             password: customer.password,
-            //token: generateToken(user),
+            token: generateToken(customer),
           });
           return res;
         }
@@ -54,13 +56,40 @@ customerRouter.post(
         username: createdUser.username,
         email: createdUser.email,
         isAdmin: createdUser.isAdmin,
-        //token: generateToken(createdUser),
+        token: generateToken(createdUser),
       });
     })
    );
 
+   customerRouter.put(
+    '/profile',
+    isAuth,
+    expressAsyncHandler(async (req, res) => {
+      const customer = await Customer.findById(req.user._id);
+      if (customer) {
+        customer.username = req.body.name || customer.username;
+        customer.email = req.body.email || customer.email;
+        if (req.body.password) {
+          customer.password = bcrypt.hashSync(req.body.password, 8);
+        }
+        const updatedUser = await customer.save();
+        res.send({
+          _id: updatedUser._id,
+          first_name: updatedUser.first_name,
+          last_name: updatedUser.last_name,
+          username: updatedUser.username,
+          email: updatedUser.email,
+          isAdmin: updatedUser.isAdmin,
+          token: generateToken(updatedUser),
+        });
+      }
+    })
+  );
+
 customerRouter.get(
     '/',
+    isAuth,
+    isAdmin,
     expressAsyncHandler(async (req, res) => {
       const customers = await Customer.find({});
       res.send(customers);
@@ -70,6 +99,8 @@ customerRouter.get(
 
 customerRouter.get(
     '/:id',
+    isAuth,
+    isAdmin,
     expressAsyncHandler(async (req, res) => {
       const customer = await Customer.findById(req.params.id);
       if (customer) {
@@ -82,6 +113,8 @@ customerRouter.get(
 
   customerRouter.delete(
     '/:id',
+    isAuth,
+    isAdmin,
     expressAsyncHandler(async (req, res) => {
       const customer = await Customer.findById(req.params.id);
       if (customer) {
@@ -98,6 +131,8 @@ customerRouter.get(
   );
   customerRouter.put(
     '/:id',
+    isAuth,
+    isAdmin,
     expressAsyncHandler(async (req, res) => {
       const customer = await Customer.findById(req.params.id);
       if (customer) {
