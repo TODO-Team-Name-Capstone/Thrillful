@@ -36,7 +36,7 @@ function App() {
             <Route path="/Collections/">
               <Collections />
             </Route>
-            <Route path="/collection/:collectionId">
+            <Route path="/:collectionId">
               <Collection />
             </Route>
           <Route path="/">

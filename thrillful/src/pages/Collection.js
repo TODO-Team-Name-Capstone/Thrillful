@@ -21,8 +21,6 @@ const Collection = () => {
     if (!collection) return <div>There are no collections.</div>;
 
     return (
-        <div>
-
         <Box p="2rem">
             <Grid templateColumns={["repeat(1, 1fr)", "repeat(3, 1fr)"]} m="auto">
                 {
@@ -46,7 +44,6 @@ const Collection = () => {
                 }
             </Grid>
         </Box >
-        </div>
     )
 };
 export default Collection
