@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './pages/Home'
 import Collections from './pages/Collections.js'
+import Collection from './pages/Collection.js'
 import Contact from './pages/Contact.js'
-import Dresses from './pages/Dresses.js'
 import Products from './pages/Products.js'
 import Product from './pages/Product.js'
 import NavBar from './components/NavBar'
@@ -36,8 +36,8 @@ function App() {
             <Route path="/Collections/">
               <Collections />
             </Route>
-            <Route path="/Dresses/">
-              <Dresses />
+            <Route path="/collection/:collectionId">
+              <Collection />
             </Route>
           <Route path="/">
             <Home />
