@@ -35,16 +35,16 @@ const NavMenu = () => {
                             <Link to="/all-products">All Products</Link>
                         </VStack>
                         <VStack _hover={{ color: "#ffffff" }} p="2rem">
-                            <Link to="/Dresses" >Dresses</Link>
+                            <Link to="collection/Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI2NTc2MzM1Njg0MA==">Dresses</Link>
                         </VStack>
                         <VStack _hover={{ color: "#ffffff" }} p="2rem">
-                            <Link to="">Two-Piece Sets</Link>
+                            <Link to="collection/Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI2NjQ5ODU3MjQ1Ng==">Two-Piece Sets</Link>
                         </VStack>
                         <VStack _hover={{ color: "#ffffff" }} p="2rem">
-                            <Link to="">Accessories</Link>
+                            <Link to="collection/Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI2NjQ5OTUyMjcyOA==">Accessories</Link>
                         </VStack>
                         <VStack _hover={{ color: "#ffffff" }} p="2rem">
-                            <Link to="">Beauty</Link>
+                            <Link to="Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI2NjQ5OTQ1NzE5Mg==">Beauty</Link>
                         </VStack>
                     </DrawerBody>
                     <DrawerFooter>
