@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './pages/Home'
 import Collections from './pages/Collections.js'
+import Collection from './pages/Collection.js'
 import Contact from './pages/Contact.js'
 import Products from './pages/Products.js'
 import Product from './pages/Product.js'
@@ -23,17 +24,20 @@ function App() {
           <Route path="/contact/" component={Contact}>
             <Contact />
           </Route>
-          <Route path="/adminbanner">         
+          <Route path="/adminbanner/">         
             <AdminBanner/>
             </Route>
-          <Route path="/Products/">
+          <Route path="/all-products/">
             <Products />
           </Route>
-          <Route path="/Product/:handle">
+          <Route path="/Product/:handle/">
             <Product />
             </Route>
             <Route path="/Collections/">
               <Collections />
+            </Route>
+            <Route path="/:collectionId">
+              <Collection />
             </Route>
           <Route path="/">
             <Home />

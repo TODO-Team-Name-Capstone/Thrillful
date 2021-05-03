@@ -32,19 +32,19 @@ const NavMenu = () => {
                     <DrawerHeader textAlign="center"><Link to="/collections">Collections</Link></DrawerHeader>
                     <DrawerBody backgroundColor="#000000" color="#ff0000" flexDirection="row" alignItems="center" justifyContent="space-between" >
                         <VStack _hover={{ color: "#ffffff"}} p="2rem">
-                            <Link to="/products">All Products</Link>
+                            <Link to="/all-products">All Products</Link>
                         </VStack>
                         <VStack _hover={{ color: "#ffffff" }} p="2rem">
-                            <Link to="/Dresses" >Dresses</Link>
+                            <Link to="/Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI2NTc2MzM1Njg0MA==">Dresses</Link>
                         </VStack>
                         <VStack _hover={{ color: "#ffffff" }} p="2rem">
-                            <Link to="">Two-Piece Sets</Link>
+                            <Link to="/Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI2NjQ5ODU3MjQ1Ng==">Two-Piece Sets</Link>
                         </VStack>
                         <VStack _hover={{ color: "#ffffff" }} p="2rem">
-                            <Link to="">Accessories</Link>
+                            <Link to="/Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI2NjQ5OTUyMjcyOA==">Accessories</Link>
                         </VStack>
                         <VStack _hover={{ color: "#ffffff" }} p="2rem">
-                            <Link to="">Beauty</Link>
+                            <Link to="/Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI2NjQ5OTQ1NzE5Mg==">Beauty</Link>
                         </VStack>
                     </DrawerBody>
                     <DrawerFooter>
