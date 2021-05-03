@@ -79,7 +79,6 @@ customerRouter.post(
           last_name: updatedUser.last_name,
           username: updatedUser.username,
           email: updatedUser.email,
-          isAdmin: updatedUser.isAdmin,
           token: generateToken(updatedUser),
         });
       }
