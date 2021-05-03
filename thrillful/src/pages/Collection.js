@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Box, Grid, Image, Text, Center } from '@chakra-ui/react'
+import { Box, Grid, Image, Text, Center, Heading } from '@chakra-ui/react'
 import { ShopContext } from '../context/shopContext';
 import { Link } from 'react-router-dom'
 
@@ -9,7 +9,7 @@ const Collection = () => {
 
     // const collectionId = 'Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI2NTc2MzM1Njg0MA==';
     const { collectionId } = useParams();
-    const { fetchCollectionById, collection } = useContext(ShopContext)
+    const { fetchCollectionById, collection, collectionName } = useContext(ShopContext)
 
 
     useEffect(() => {
@@ -22,6 +22,9 @@ const Collection = () => {
 
     return (
         <Box p="2rem">
+            <Center>
+                <Heading>{collectionName}</Heading>
+            </Center>
             <Grid templateColumns={["repeat(1, 1fr)", "repeat(3, 1fr)"]} m="auto">
                 {
                     collection.map(product => (

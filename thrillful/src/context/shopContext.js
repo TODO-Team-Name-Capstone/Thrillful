@@ -18,6 +18,7 @@ class ShopProvider extends Component {
         checkout: {},
         collections: [],
         collection: [],
+        collectionName:"",
         /*for cart slide out functionality*/
         isCartOpen: false,
         isMenuOpen: false
@@ -87,8 +88,9 @@ class ShopProvider extends Component {
     // collection.js
     fetchCollectionById = async (collectionId) => {
         const collection = await client.collection.fetchWithProducts(collectionId);
+        const collectionName = collection.title;
         this.setState({collection: collection.products});
-        console.log("collection.products", collection.products);
+        this.setState({collectionName: collectionName});
     }
 
     closeCart = async () => { this.setState({ isCartOpen: false }) }
