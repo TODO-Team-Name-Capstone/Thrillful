@@ -10,6 +10,8 @@ import NavMenu from './components/NavMenu'
 import Footer from './components/Footer'
 import Banner from './components/Banner'
 import AdminBanner from './pages/AdminBanner.js'
+import Login from './pages/Login'
+import Register from './pages/Register'
 
 function App() {
   return (
@@ -22,6 +24,12 @@ function App() {
         <Switch>
           <Route path="/contact/" component={Contact}>
             <Contact />
+          </Route>
+          <Route path="/Login/" component={Login}>
+            <Login />
+          </Route>
+          <Route path="/Register/" component={Register}>
+            <Register />
           </Route>
           <Route path="/adminbanner">         
             <AdminBanner/>
