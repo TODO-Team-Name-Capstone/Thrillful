@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { ShopContext } from '../context/shopContext'
-import { Flex, Text, Icon, Image, Box, Badge } from '@chakra-ui/react'
-import { MdMenu, MdShoppingCart } from 'react-icons/md'
+import { Flex, Text, Icon, Box, Badge } from '@chakra-ui/react'
+import { MdMenu, MdShoppingCart, MdAccountCircle } from 'react-icons/md'
 
 const NavBar = () => {
 
@@ -18,6 +18,9 @@ const NavBar = () => {
                 <Text color="white" align>Thrillful</Text>
             </Link>
             <Box>
+                <Icon fill="white" cursor="pointer" as={MdAccountCircle} w={50} h={50} pr={5}
+                    onClick={() => <Link></Link>}
+                />
                 <Icon fill="white" cursor="pointer" as={MdShoppingCart} w={30} h={30}
                     onClick={() => openCart()}
                 />
