@@ -19,14 +19,16 @@ class ShopProvider extends Component {
         collections: [],
         collection: [],
         collectionName:"",
+        quantity: 0,
         /*for cart slide out functionality*/
         isCartOpen: false,
         isMenuOpen: false
     }
 
+    // Checkout
     createCheckout = async () => {
         const checkout = await client.checkout.create()
-        localStorage.setItem("checkout-id", checkout.id)
+        localStorage.setItem("checkout_id", checkout.id)
         this.setState({ checkout: checkout })
     }
 
@@ -46,6 +48,7 @@ class ShopProvider extends Component {
             })
     }
 
+    // Shopping Cart
     addItemToCheckout = async (variantId, quantity) => {
         const lineItemsToAdd = [
             {
@@ -64,8 +67,15 @@ class ShopProvider extends Component {
         this.setState({ checkout: checkout })
     }
 
-    fetchAllProducts = async () => {
+    updateLineItem = async (lineItemToUpdate) => {
+        client.checkout.updateLineItems(this.state.checkout.id, lineItemToUpdate).then((checkout) =>{
+            console.long("checkout: ", checkout.lineItems)
+            this.setState ({ checkout: checkout })
+        })
+    }
 
+    // Products
+    fetchAllProducts = async () => {
         const products = await client.product.fetchAll()
         //updates the state//
         this.setState({ products: products })
@@ -74,18 +84,21 @@ class ShopProvider extends Component {
     //using handle so product name is in browser link not a number
     fetchProductWithHandle = async (handle) => {
         const product = await client.product.fetchByHandle(handle)
+        const quantity = await client.product.quantity;
         //updates the state//
         this.setState({ product: product })
+        this.setState({ quantity: quantity})
     }
 
-    // currently being used in Collections. Does not fetch collections with their products.
+    // Collections
+    // currently being used in Collections.js. Does not fetch collections with their products.
     fetchAllCollections = async () => {
         const collections = await client.collection.fetchAll();
         this.setState({ collections: collections });
         //console.log("COLLECTIONS ALL", collections);
     };
 
-    // collection.js
+    // Collection.js
     fetchCollectionById = async (collectionId) => {
         const collection = await client.collection.fetchWithProducts(collectionId);
         const collectionName = collection.title;
@@ -110,6 +123,7 @@ class ShopProvider extends Component {
                 fetchProductWithHandle: this.fetchProductWithHandle,
                 addItemToCheckout: this.addItemToCheckout,
                 removeLineItem: this.removeLineItem,
+                updateLineItem: this.updateLineItem,
                 fetchAllCollections: this.fetchAllCollections,
                 fetchCollectionById: this.fetchCollectionById,
                 closeCart: this.closeCart,
