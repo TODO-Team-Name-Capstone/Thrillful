@@ -19,6 +19,7 @@ class ShopProvider extends Component {
         collections: [],
         collection: [],
         collectionName:"",
+        lineItems: [],
         quantity: 0,
         /*for cart slide out functionality*/
         isCartOpen: false,
@@ -67,12 +68,21 @@ class ShopProvider extends Component {
         this.setState({ checkout: checkout })
     }
 
-    updateLineItem = async (lineItemToUpdate) => {
-        client.checkout.updateLineItems(this.state.checkout.id, lineItemToUpdate).then((checkout) =>{
-            console.long("checkout: ", checkout.lineItems)
+    // // (checkoutId, Line item to update)
+    updateLineItem = async (checkoutId, lineItemToUpdate) => {
+        // Update the line item on the checkout (change the quantity or variant)
+        client.checkout.updateLineItems(checkoutId, lineItemToUpdate).then((checkout) =>{
             this.setState ({ checkout: checkout })
         })
     }
+
+    // updateLineItem = async (checkoutId, lineItemToUpdate) => {
+    //     // Update the line item on the checkout (change the quantity or variant)
+    //     const checkout = await client.checkout.updateLineItems(checkoutId, lineItemToUpdate)
+    //     const lineItems = checkout.lineItems;
+    //     this.setState = ({ checkout: checkout })
+    //     this.setState = ({ lineItems : lineItems})        
+    // }
 
     // Products
     fetchAllProducts = async () => {
@@ -115,7 +125,12 @@ class ShopProvider extends Component {
     openMenu = async () => { this.setState({ isMenuOpen: true }) }
 
     render() {
-
+    // TEST update line item
+        // const checkoutId = 'Z2lkOi8vc2hvcGlmeS9DaGVja291dC80YzRhM2E1MDVlZDJiYTk1MzJjMzQwNGY5YTM5M2Y0ZT9rZXk9YTdhODM0YWQyYmM5NzJiNmZiNGI4ZTEwZGI1NmY2ZWE=';
+        // const lineItemToUpdate = [
+        //     { id: 'Z2lkOi8vc2hvcGlmeS9DaGVja291dExpbmVJdGVtLzM5NzAwMTQyNDU3MDAwMD9jaGVja291dD00YzRhM2E1MDVlZDJiYTk1MzJjMzQwNGY5YTM5M2Y0ZQ==', quantity:2 }
+        // ];
+        // updateLineItem(checkoutId, lineItemToUpdate);
         return (
             <ShopContext.Provider value={{
                 ...this.state,
